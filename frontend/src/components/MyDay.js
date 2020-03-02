@@ -27,10 +27,10 @@ export const MyDay = () => {
         
         <div className="myDayContainer">
             {photos.map((photo) => (
-                <div className="myDayPhoto" key={photo.id}>
+                <div className="myDayPhotos" key={photo.id}>
                     <Link to={`/photos/${photo.id}`}>
+                    <img src={photo.src.medium}/>
                     <h3>{photo.photographer} </h3>
-                        <img src={photo.src.medium}/>
                     {/* <img src={`https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&h=130`}/> */}
                     {/* <img src={`https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&h=130`}/> */}
                     {/* <img
