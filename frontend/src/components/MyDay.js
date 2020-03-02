@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
-const url = "https://api.pexels.com/v1/search?query=example+crossfit&per_page=66&page=1"
+const url = "https://api.pexels.com/v1/search?query=example+beach&per_page=10&page=1"
 
 export const MyDay = () => {
   const [photos, setPhotos] = useState([])
@@ -29,13 +29,22 @@ export const MyDay = () => {
             {photos.map((photo) => (
                 <div className="myDayPhoto" key={photo.id}>
                     <Link to={`/photos/${photo.id}`}>
-                    {/* <div className="Date">
-                        <h1>{photo.original_title}</h1>
-                        <p>Released {photo.release_date}</p>
-                    </div> */}
+                    <h3>{photo.photographer} </h3>
+                        <img src={photo.src.medium}/>
+                    {/* <img src={`https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&h=130`}/> */}
+                    {/* <img src={`https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&h=130`}/> */}
+                    {/* <img
+                    //     source={{url: photo.src.original}}
+                    //     style={{width:400, height:300, marginVertical: 10, }}
+                    //     alt={'picture'}
+                    // />
+                    // {/* <div className="Date">
+                    //     <h1>{photo.original_title}</h1>
+                    //     <p>Released {photo.release_date}</p>
+                    // </div> */}
                     
                         {/* <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} />   */}
-                    </Link>
+                    </Link> 
                 </div>
             ))}
         </div>

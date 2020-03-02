@@ -8,12 +8,12 @@ export const App = () => {
   return (
     <BrowserRouter>
     <Switch>
-      <Route path='/'exact>
+      <Route path="/" exact>
         <MyDay />
       </Route>
-      <Route path="/photos/:photoId">
+      {/* <Route path="/photos/:photoId"> */}
         {/* <MyDay2 /> */}
-      </Route>
+      {/* </Route> */}
     </Switch>
     </BrowserRouter>
   )
